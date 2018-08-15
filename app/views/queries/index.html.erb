@@ -1,0 +1,30 @@
+
+
+<h1>Queries</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Query</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @queries.each do |query| %>
+      <tr>
+        <td><%= query.question %></td>
+        <td>
+          <% if query.answer !=nil %>
+          <%= query.answer %>
+          <% else %>
+          Waiting for response
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Query', new_query_path %>

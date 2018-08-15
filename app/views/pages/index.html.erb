@@ -1,0 +1,537 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T club a Sports Category Flat Bootstrap responsive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="T club Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+
+<link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- //font -->
+<%= javascript_include_tag "jquery-1.11.1.min.js" %>
+<%= javascript_include_tag "bootstrap.js" %>
+<%= javascript_include_tag "SmoothScroll.min.js" %>
+
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+    });
+  });
+</script>
+</head>
+<body>
+  <!-- banner -->
+  <div class="jarallax banner">
+    <div class="wthree-different-dot">
+      <!-- header -->
+
+      <!-- //header -->
+      <div class="banner-top">
+        <div class="container">
+          <div class="slider">
+            <div class="callbacks_container">
+              <ul class="rslides callbacks callbacks1" id="slider4">
+                <li>
+                  <div class="banner_text">
+                    <div class="agileits-star">
+                      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                      <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+                    </div>
+                    <h3>Registeration Open</h3>
+                    <p>Hurry up!! Don't miss out the fun.</p>
+                    <div class="w3-button">
+                      <a href="#" data-toggle="modal" data-target="#myModal" style="color:white;">Read More</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="banner_text">
+                    <div class="agileits-star">
+                      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                      <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                      <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+                    </div>
+                    <h3>Event starts in 2 days</h3>
+                    <p>Be ready to get your minds blown out</p>
+                    <div class="w3-button">
+                      <a href="#" data-toggle="modal" data-target="#myModal" style="color:white;">Read More</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <%= javascript_include_tag "responsiveslides.min.js" %>
+
+            <script>
+              // You can also use "$(window).load(function() {"
+              $(function () {
+                // Slideshow 4
+                $("#slider4").responsiveSlides({
+                auto: true,
+                pager:true,
+                nav:true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                  $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                  $('.events').append("<li>after event fired.</li>");
+                }
+                });
+
+              });
+             </script>
+            <!--banner Slider starts Here-->
+          </div>
+        </div>
+      </div>
+      <div class="agileinfo-address">
+        <div class="container">
+          <div class="agileinfo-address-grid">
+            <ul>
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i> Bangalore ,560100, India.</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i> 7566189776</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //banner -->
+  <!-- modal -->
+  <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        </div>
+        <div class="modal-body">
+          <div class="agileits-w3layouts-info">
+             <%= image_tag("1.jpg", :alt => "") %>
+            <p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper.  Cras tempor massa luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //modal -->
+  <!-- about -->
+  <div class="about" id="about">
+    <div class="container">
+      <div class="w3-agileits-about-grids">
+        <div class="col-md-6 agile-about-left">
+          <h2>About Us</h2>
+          <h5>Register. Play. Watch</h5>
+          <p> This is our motto. We let you do these three things quite conveniently.
+          <span> We bring news to you about your favourite event </span><span> We inform you abouth the registeration dates and keep you upto date with the events going on.</span> Morbi rutrum ut risus sed hendrerit. Integer laoreet odio nec nisi varius, at scelerisque nisi rhoncus.liquam libero enim, fermentum sed ligula a, finibus faucibus erat. Sed ipsum orci, rutrum eget diam ac, luctus commodo quam.</p>
+        </div>
+        <div class="col-md-6 agile-about-right">
+          <div class="agile-about-right-img1">
+            <%= image_tag("a1.jpg", :alt => "") %>
+          </div>
+          <div class="agile-about-right-img2">
+             <%= image_tag("a2.jpg", :alt => "") %>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <!-- //about -->
+  <!-- services -->
+  <% if user_signed_in? %>
+  <div class="services" id="services">
+    <div class="container">
+      <div class="w3-agile-heading">
+        <h3>Our Services</h3>
+      </div>
+      <div class="w3ls-services-grids">
+
+        <div class="col-md-3 w3ls-services-left">
+
+          <div class="w3ls-services-left-top">
+           <a href="/events">
+            <i class="fa fa-futbol-o" aria-hidden="true"></i>
+            <h5>Register for event</h5>
+            <p> Just a click away from participating in your favourite event </p>
+          </a>
+          </div>
+          <a href="/teams">
+          <div class="w3ls-services-left-top w3ls-services-left-top1">
+
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <h5>View team</h5>
+            <p> Allows  you to view the teams you are registered in.</p>
+
+          </div>
+          </a>
+        </div>
+        <div class="col-md-6 w3ls-services-middle">
+          <div class="w3ls-services-middle-img">
+            <%= image_tag("7.jpg", :alt => "") %>
+          </div>
+          <div class="w3ls-services-middle-grids">
+            <div class="col-md-6 w3ls-services-middle-left">
+            <a href="/eventschedules">
+              <div class="w3ls-services-left-top">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <h5> Event schedule </h5>
+                <p>Get to know when and where the event is being held</p>
+              </div>
+             </a>
+            </div>
+            <div class="col-md-6 w3ls-services-middle-left">
+            <a href="/giveFeedback">
+              <div class="w3ls-services-left-top">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                <h5> Feedback </h5>
+                <p> An opportunity for improvement. Better Services</p>
+              </div>
+            </a>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        <div class="col-md-3 w3ls-services-left">
+        <a href="/askQuery" >
+          <div class="w3ls-services-left-top">
+            <i class="fa fa-question" aria-hidden="true"></i>
+            <h5>Ask Query</h5>
+            <p>Have a question. </br>Dont worry, just query.</p>
+          </div>
+          </a>
+          <a href="/noticeBoard">
+          <div class="w3ls-services-left-top w3ls-services-left-top1">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <h5>Notice board </h5>
+            <p> A space for you to cheer for you favourite players, pose questions, debate and much more.</p>
+          </div>
+          </a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <!-- //services -->
+  <!-- gallery -->
+  <div class="gallery" id="gallery">
+    <div class="container">
+      <div class="w3-agile-heading">
+        <h3>Our Gallery</h3>
+      </div>
+      <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+          <ul id="myTab" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home-main" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">All</a></li>
+            <li role="presentation"><a href="#learning" role="tab" id="learning-tab" data-toggle="tab" aria-controls="learning">Day 1</a></li>
+            <li role="presentation"><a href="#playing" role="tab" id="playing-tab" data-toggle="tab" aria-controls="playing"> Day 2</a></li>
+            <li role="presentation"><a href="#painting" role="tab" id="painting-tab" data-toggle="tab" aria-controls="painting"> Day 3</a></li>
+            <li role="presentation"><a href="#school" role="tab" id="school-tab" data-toggle="tab" aria-controls="school"> Day 4</a></li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
+              <div class="w3_tab_img">
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                   <a class="cm-overlay" href= <% asset_path('2.jpg') %> >
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("2.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="/assets/images/3.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("3.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href=asset-path('4.jpg')>
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("4.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="/home/it/6sem/SE/Sports_Event_Management_Portal5/app/assets/images/5.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("5.jpg", :alt => "", :class => "img-responsive" ) %>
+                    </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="../../assets/images/6.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("6.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="../../assets/images/7.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("7.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="../../assets/images/8.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("8.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="9.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("9.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="learning" aria-labelledby="learning-tab">
+              <div class="w3_tab_img">
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="../../assets/images/2.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("2.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/3.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("3.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="playing" aria-labelledby="playing-tab">
+              <div class="w3_tab_img">
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/4.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("4.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/5.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("5.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/6.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("6.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/7.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("7.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="painting" aria-labelledby="painting-tab">
+              <div class="w3_tab_img">
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/8.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("8.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/9.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("9.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/2.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("2.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="school" aria-labelledby="school-tab">
+              <div class="w3_tab_img">
+                <div class="col-md-3 w3_tab_img_left">
+                  <div class="demo">
+                    <a class="cm-overlay" href="images/3.jpg">
+                      <figure class="imghvr-shutter-in-out-diag-2"><%= image_tag("3.jpg", :alt => "", :class => "img-responsive" ) %>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <%= javascript_include_tag "jquery.tools.min.js" %>
+       <%= javascript_include_tag "jquery.mobile.custom.min.js" %>
+        <%= javascript_include_tag "jquery.cm-overlay.js" %>
+      <script>
+        $(document).ready(function(){
+          $('.cm-overlay').cmOverlay();
+        });
+      </script>
+    </div>
+  </div>
+  <!-- //gallery -->
+  <!-- team -->
+  <div class="jarallax team" id="team">
+    <div class="team-dot">
+      <div class="container">
+        <div class="w3-agile-heading team-heading">
+          <h3>Our Team</h3>
+        </div>
+        <div class="agileits-team-grids">
+          <div class="col-md-3 agileits-team-grid">
+            <div class="team-info">
+              <%= image_tag("t1.jpg", :alt => "") %>
+              <div class="team-caption">
+                <h4>Shayaan</h4>
+                <p>Fusce laoreet</p>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 agileits-team-grid">
+            <div class="team-info">
+             <%= image_tag("t2.jpg", :alt => "") %>
+              <div class="team-caption">
+                <h4>Aditya</h4>
+                <p>Fusce laoreet</p>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 agileits-team-grid">
+            <div class="team-info">
+             <%= image_tag("t3.jpg", :alt => "") %>
+              <div class="team-caption">
+                <h4>Meghana</h4>
+                <p>Fusce laoreet</p>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 agileits-team-grid">
+            <div class="team-info">
+              <%= image_tag("t4.jpg", :alt => "") %>
+              <div class="team-caption">
+                <h4>Neha</h4>
+                <p>Fusce laoreet</p>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- //footer -->
+  <%= javascript_include_tag "move-top.js" %>
+       <%= javascript_include_tag "easing.js" %>
+
+
+
+  <!-- here stars scrolling icon -->
+  <script >
+    $(document).ready(function() {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+        };
+      */
+
+      $().UItoTop({ easingType: 'easeOutQuart' });
+
+      });
+  </script>
+<!-- //here ends scrolling icon -->
+<%= javascript_include_tag "jarallax.js" %>
+
+  <script >
+      /* init Jarallax */
+      $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+      })
+    </script>
+</body>
+</html>

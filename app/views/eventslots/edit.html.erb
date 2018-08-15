@@ -1,0 +1,36 @@
+<h1>Editing Eventslot</h1>
+
+<%= simple_form_for(@eventslot) do |f| %>
+  <%= f.error_notification %>
+
+<div class="form-inputs">
+  <!-- <%= f.hidden_field :eventschedule_id, :value => params[:event_schedule_id] %> -->
+  <div class="field">
+    <%= f.label :team1name %>
+    <%= f.collection_select(:team1name, Team.where("event_id = ?", params[:id]), :teamname, :teamname, {:include_blank => "Please select a Team"},) %><br><br>
+    <%= f.label :team2name %>
+    <%= f.collection_select(:team2name, Team.where("event_id = ?", params[:id]), :teamname, :teamname, {:include_blank => "Please select a Team"},) %><br><br>
+    <!-- <%= f.label :team1name %> -->
+    <!-- <%= f.collection_select(:team1name, Team.where("event_id = ?", (Eventschedule.where(id: params[:event_schedule_id]).pluck(:event_id))), :teamname, :teamname, {:include_blank => "Please select a Team"},) %> <br><br> -->
+    <!-- <%= f.label :team2name %> -->
+    <!-- <%= f.collection_select(:team2name, Team.where("event_id = ?", (Eventschedule.where(id: params[:event_schedule_id]).pluck(:event_id))), :teamname, :teamname, {:include_blank => "Please select a Team"},) %> <br><br> -->
+    <!-- <%= f.label :starttime %><br> -->
+    <!-- <%= f.time_field :starttime, required: true %><br> -->
+    <%= f.input :starttime, label: "Start Time", required: true %>
+    <!-- <%= f.label :endtime %><br> -->
+    <!-- <%= f.time_field :endtime, required: true %><br> -->
+    <%= f.input :endtime, label: "End Time", required: true %>
+    <!-- <%= f.label :venue %><br> -->
+    <!-- <%= f.text_field :venue, required: true %><br> -->
+    <%= f.input :venue, label: "Venue", required: true %>
+    <!-- <%= f.label :winner %><br> -->
+    <!-- <%= f.text_field :winner%><br> -->
+    <%= f.input :winner %>
+    <%= f.submit %>
+</div>
+<% end %>
+
+
+
+<!-- <%= link_to 'Show', @eventslot %> | -->
+<!-- <%= link_to 'Back', eventslots_path %> -->

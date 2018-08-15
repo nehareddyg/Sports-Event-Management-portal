@@ -1,0 +1,26 @@
+<%= simple_form_for(eventslot) do |f| %>
+  <% if eventslot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eventslot.errors.count, "error") %> prohibited this eventslot from being saved:</h2>
+
+      <ul>
+      <% eventslot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-inputs">
+  <%= f.hidden_field :eventschedule_id, :value => params[:event_schedule_id] %>
+    <%= f.label :team1name %><br>
+    <%= f.collection_select(:team1name, Team.where("event_id = ?", (Eventschedule.where(id: params[:event_schedule_id]).pluck(:event_id))), :teamname, :teamname, {:include_blank => "Please select a Team"},) %><br>
+    <%= f.label :team2name %><br>
+    <%= f.collection_select(:team2name, Team.where("event_id = ?", (Eventschedule.where(id: params[:event_schedule_id]).pluck(:event_id))), :teamname, :teamname, {:include_blank => "Please select a Team"},) %><br>
+    <%= f.input :starttime, required: true %>
+    <%= f.input :endtime , required: true %>
+    <%= f.input :venue,  required: true %>
+    <%= f.input :winner %>
+    <%= f.button :submit %>
+</div>
+<% end %>

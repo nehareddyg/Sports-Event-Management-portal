@@ -1,0 +1,33 @@
+<div>
+<%= grid(@eventslot_grid) do |g|
+  g.column  name: 'Team 1' do |eventslot|
+    eventslot.team1name
+  end
+  g.column name: 'Team 2' do |eventslot|
+    eventslot.team2name
+  end
+  g.column name: 'Start Time' do |eventslot|
+    eventslot.starttime.strftime('%r')
+  end
+  g.column name: 'End Time' do |eventslot|
+    eventslot.endtime.strftime('%r')
+  end
+  if current_user.present? && current_user.adminflag==1 then
+    g.column name: 'Edit Event Slot' do |eventslot|
+      link_to 'Edit',edit_eventslot_path(eventslot)
+    end
+  end
+  g.column name: 'Winner' do |eventslot|
+    if eventslot.winner == "" || eventslot.winner.nil?
+      "Yet to be Decided"
+    else
+      eventslot.winner
+    end
+  end
+  # g.column name: 'View Event Slots' do |eventslot|
+  #   link_to 'Click to Open', vieweventslots_path(eventslot)
+  # end
+end-%>
+</div>
+
+<%= link_to 'Back', vieweventschedule_path %>

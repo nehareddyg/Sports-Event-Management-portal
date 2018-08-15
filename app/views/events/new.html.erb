@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "form" %>
+
+<div class="col-md-8 col-md-offset-2">
+<h1 class="new-msg-header">New Event</h1>
+
+<%= render 'form', eventschedule: @event %>
+</div>
+<div>
+<%= link_to 'Back', root_path %>
+</div>

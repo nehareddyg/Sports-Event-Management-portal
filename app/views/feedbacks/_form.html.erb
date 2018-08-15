@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback</title>
+</head>
+<body>
+	<%= simple_form_for @feedback do |f| %>
+	<div class="cont">
+	<%= f.error_notification %>  
+		<div class="form-inputs" id="contact">
+		   <%= f.label :Event_name, :required => true%>
+		   <%= collection_select(:feedback,:eventname, Event.all,:name,:name,{prompt: true}) %>
+		   <%= f.input :feedback, required: true %>
+		   <%= f.button :submit, :style => "cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;"%>
+		</div>
+	<% end %>
+	</div>
+</body>
+</html>

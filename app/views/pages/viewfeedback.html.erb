@@ -1,0 +1,13 @@
+<div>
+		<%= grid(@feedbacks_grid) do |g|
+			g.column  name: 'Event name' do |feedback|
+				feedback.eventname
+			end
+
+      g.column  name: 'Feedback' do |feedback|
+				feedback.feedback
+			end
+
+    end-%>
+</div>
+<%= link_to 'Back', root_path %>

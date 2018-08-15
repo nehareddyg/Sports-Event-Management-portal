@@ -1,0 +1,31 @@
+
+<h1> Register for <%=  params[:string] %> </h1>
+
+<%= simple_form_for (team) do |f| %>
+  <% if team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.error_notification %>
+
+  <%= f.input :teamname, label: "Team Name" , :required => true%><br>
+
+  <%= f.label :Enter_Team_members_names %>
+
+  <%= f.hidden_field :event_id, :value => Event.find_by(:name => params[:string]).id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>  
+
+    
+  <% for item in  1..(Event.find_by(:name => params[:string]).teamsize) %>
+    <%= f.input :"member#{item}", label: "member_name#{item}", :required => true  %>
+  <% end %>  
+  <%= f.button :submit %>
+  
+<% end %>

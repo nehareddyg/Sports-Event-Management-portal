@@ -1,0 +1,2 @@
+module EventslotsHelper
+end

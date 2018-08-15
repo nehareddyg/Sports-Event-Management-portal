@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Form</title>
+	<%= stylesheet_link_tag "form" %>
+
+</head>
+<body>
+
+<%= simple_form_for(@event) do |f| %>
+  <div class="cont">
+  <%= f.error_notification %>
+  <div class="form-inputs" id="contact">
+      <%= f.input :name, required: true ,:style => 'align :center'%>
+      <%= f.input :duration, required: true %>
+      <%= f.input :teamsize , required: true%>
+      <%= f.input :maxnumberofteams, label: "Maximum number of teams", required: true %>
+      <%= f.button :submit, :type => 'submit' , :id => 'contact-submit' ,:style => 'cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;' %>
+
+  </div>
+<% end %>
+</div>
+</body>
+</html>

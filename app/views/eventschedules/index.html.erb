@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Eventschedules</h1>
+
+<table class="table">
+  <!-- <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead> -->
+  <thead>
+    <tr>
+      <th> Event name</th>
+      <th> Date </th>
+      <th> Start Time</th>
+      <th> End Time </th>
+      <th> Winners </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eventschedules.each do |eventschedule| %>
+      <tr>
+        <td> <%= Event.find(eventschedule.event_id).name %> </td>
+        <td> <%= eventschedule.date %> </td>
+        <td> <%= eventschedule.starttime.strftime("%r")  %>  </td>
+        <td> <%= eventschedule.endtime.strftime("%r") %></td>
+        <td> <%=link_to 'Click to Open', vieweventslot_path(eventschedule)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

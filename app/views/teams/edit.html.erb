@@ -1,0 +1,40 @@
+<h1>Editing Team</h1>
+
+
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+   <%= f.label :Team_name %><br>
+    <%= f.text_field :teamname %>
+  </p>
+
+<p> Enter Team members names </p>
+
+    
+  <% for item in  1..(Event.find(@team.event_id ).teamsize) %>
+    <p>
+    <%= f.label :"member_name#{item}" %><br>
+    <%= f.text_field :"member#{item}" %>
+    </p> 
+  <% end %>
+    
+
+   <div class="actions">
+    <%= f.submit :update_team %>
+  </div>
+  
+<% end %>
+
+<%= link_to 'Show', @team %> |
+<%= link_to 'Back', teams_path %>

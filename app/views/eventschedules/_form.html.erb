@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedules for event</title>
+  <%= stylesheet_link_tag "form" %>
+</head>
+<body>
+<%= simple_form_for(eventschedule) do |f| %>
+
+  <!-- <%= f.error_notification %> -->
+  <% if eventschedule.errors.any? %>
+  <!-- <%= f.error_notification %> -->
+    <div id="error_explanation">
+      <h2><%= pluralize(eventschedule.errors.count, "error") %> prohibited this eventschedule from being saved:</h2>
+
+      <ul>
+      <% eventschedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="cont">
+    <div class="form-inputs" id="contact">
+      <!-- <%= f.label :name %> -->
+      <%= f.label :name, :required => true%>
+      <%= f.collection_select(:event_id, Event.all, :id, :name, {:include_blank => "Please select an Event"}) %><br><br>
+      <!-- <%= f.label :date %> -->
+      <!-- <%= f.date_select(:date,:start_year => 2017) %> -->
+      <%= f.input :date, required: true, start_year: 2017 %>
+      <!-- <%= f.label :starttime %> -->
+      <!-- <%= f.time_field :starttime, required: true %> -->
+      <%= f.input :starttime, required: true %>
+      <!-- <%= f.label :endtime %> -->
+      <!-- <%= f.time_field :endtime, required: true %> -->
+      <%= f.input :endtime, required: true %>
+      <%= f.button :submit,:style => "cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;" %>
+    </div>
+  </div>
+<% end %>
+</body>
+</html>

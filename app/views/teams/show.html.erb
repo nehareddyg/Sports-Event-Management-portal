@@ -1,0 +1,116 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team Name:</strong>
+  <%=@team.teamname %>
+</p>
+
+<table style="60%" class="table">
+<% if @team.member1 != nil %>
+    <tr><td>   <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member1 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member2 != nil %>
+    <tr><td>   <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member2 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member3 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member3 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member4 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member4 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member5 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member5 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member6 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member6 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member7 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member7 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member8 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member8 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member9 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member9 %>   
+</td>
+
+  </tr>
+<% end %>
+<% if @team.member10 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member10 %>   
+</td>
+
+  </tr>
+<% end %>
+
+<% if @team.member11 != nil %>
+    <tr><td>  <span class="glyphicon glyphicon-user"></span> Member </td>
+<td>
+    <%= @team.member11 %>   
+</td>
+
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
+</body>

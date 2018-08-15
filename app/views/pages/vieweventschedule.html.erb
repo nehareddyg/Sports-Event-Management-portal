@@ -1,0 +1,26 @@
+<div>
+		<%= grid(@eventschedule_grid) do |g|
+			g.column  name: 'Event Name' do |eventschedule|
+				eventschedule.event.name
+			end
+			g.column name: 'Date' do |eventschedule|
+				eventschedule.date
+			end
+			g.column name: 'Start Time' do |eventschedule|
+				eventschedule.starttime.strftime('%r')
+			end
+      g.column name: 'End Time' do |eventschedule|
+				eventschedule.endtime.strftime('%r')
+			end
+		g.column name: 'Edit Event Schedule' do |eventschedule|
+    		link_to 'Edit', edit_eventschedule_path(eventschedule)
+  		end
+			g.column name: 'Create Event Slot' do |eventschedule|
+    		link_to 'Click to Create', event_slot_new_path(eventschedule)
+  		end
+			g.column name: 'View Event Slots' do |eventschedule|
+    		link_to 'Click to Open', vieweventslot_path(eventschedule)
+  		end
+		end-%>
+</div>
+<%= link_to 'Back', root_path %>

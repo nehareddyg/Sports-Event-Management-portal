@@ -1,0 +1,24 @@
+<div>
+		<%= grid(@events_grid) do |g|
+			# g.column name: 'ID' do |validation|
+			# 	validation.id
+			# end
+			g.column  name: 'Name' do |event|
+				event.name
+			end
+			g.column name: 'Duration (in hours)' do |event|
+				event.duration
+			end
+      g.column name: 'Interested Attendees' do |event|
+				event.expectedNoOfAttendees
+			end
+			# g.column name: 'Proposal' do |owned|
+		  #       link_to 'Proposal Document', owned.avatar.url, :target => "_blank"
+      #
+			# end
+			g.column name: 'Edit Event' do |event|
+    		link_to 'Edit',edit_event_path(event)
+  		end
+		end-%>
+</div>
+<%= link_to 'Back', root_path %>

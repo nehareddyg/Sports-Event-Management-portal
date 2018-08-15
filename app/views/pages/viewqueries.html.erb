@@ -1,0 +1,21 @@
+<div>
+		<%= grid(@queries_grid) do |g|
+			g.column  name: 'Query' do |query|
+				query.question
+			end
+
+			g.column  name: 'Answer' do |query|
+				if query.answer.nil?
+					"Not Answered"
+				else
+					query.answer
+				end
+			end
+
+      g.column  name: 'Respond' do |query|
+				link_to 'Respond', edit_query_path(query)
+			end
+
+    end-%>
+</div>
+<%= link_to 'Back', root_path %>

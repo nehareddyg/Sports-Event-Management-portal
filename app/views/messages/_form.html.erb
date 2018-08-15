@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Message</title>
+</head>
+<body>
+	<div class="cont">
+		<div id="contact">
+			<%= simple_form_for @message do |f| %>
+				<%= f.input :title, label: "Message Title" %>
+				<%= f.input :description %>
+				<%= f.button :submit, :style => "cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;"%>
+			<% end %>
+		</div>
+	</div>
+</body>
+</html>
